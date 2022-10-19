@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "audiorw-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1612835219,
+        "narHash": "sha256-5y8L8EviYXTXMnBEZNXzjAd1NVkdi23oFX7NgHAmRAo=",
+        "owner": "sportdeath",
+        "repo": "audiorw",
+        "rev": "02d98e7c6d83887ea5d43c17e9c6bf18fc4efb78",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sportdeath",
+        "repo": "audiorw",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "locked": {
         "lastModified": 1659877975,
@@ -49,6 +65,7 @@
     },
     "root": {
       "inputs": {
+        "audiorw-src": "audiorw-src",
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable"

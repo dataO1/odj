@@ -4,8 +4,13 @@ project_source_files = [
   'src/main.cpp'
 ]
 
+### Usually dependencies, that are installed as system packages are found via
+#the dependency() method, which uses pkgs-config. But when using a local
+#installation of a library we need to use find_library(), which searches
+#locally.
 project_dependencies = [
-  dependency('libpulse')
+  # dependency('libavformat'),
+  meson.get_compiler('cpp').find_library('audiorw')
 ]
 
 project_target = executable(
