@@ -5,7 +5,7 @@ project_source_files = [
 ]
 
 project_dependencies = [
-  # dependency('headeronly', fallback : ['headeronly', 'headeronly_dep']),
+  dependency('libpulse')
 ]
 
 project_target = executable(

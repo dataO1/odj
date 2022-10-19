@@ -17,6 +17,7 @@
             meson
             ninja
             pkg-config
+            cmake
           ];
           buildInputs = [
             libpulseaudio
@@ -27,13 +28,13 @@
         defaultPackage = pkgs.stdenv.mkDerivation {
           name = "odj";
           src = pkgs.lib.cleanSource ./.;
-          builder = ./meson.build;
-          mesonFlags = [ ];
 
           nativeBuildInputs = with pkgs; with unstable;[
             meson
             ninja
             pkg-config
+            cmake
+            miniaudio
           ];
 
           buildInputs = with pkgs; with unstable;[
